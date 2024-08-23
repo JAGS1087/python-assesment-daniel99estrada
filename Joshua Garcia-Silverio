@@ -1,0 +1,33 @@
+import os
+import time
+
+def clear():
+    if os.name == 'nt':
+        _=os.system('cls')
+    else:
+        _=os.system('clear')
+
+
+global username
+global password
+global userpass
+global useruser
+signed_ined = False 
+
+username = "Student"
+password = "Password1"
+
+while signed_ined == False:
+    clear()
+    print("Welcome")
+    useruser = input("User: \n")
+    if useruser == username:
+        userpass = input("Password: "+"\n")
+        if userpass == password:
+            print("Logging In")
+            signed_ined = True
+        else:
+            print("Incorrect Password")
+    else:
+        print("Incorrect Username")
+        time.sleep(1)
